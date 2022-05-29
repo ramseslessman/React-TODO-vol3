@@ -23,7 +23,7 @@ function TodoForm(props) {
         <input
           className='inputAdd'
           type="text"
-          placeholder="Ingrese un Nuevo TODO"
+          placeholder="Ingresa Nueva Tarea"
           value={newTodoValue}
           onChange={onChange}
         />

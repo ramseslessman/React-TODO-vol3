@@ -20,25 +20,30 @@ function TodoItem(props) {
   };
 
   return (
-    <div >
+    <div>
       {!modoEdit ? (
-        <li className='todoList' >
-          <button onClick={props.onComplete} className='buttonCompleted'>
-          {props.todos.completed ? 'completed' : 'complete'}
+        <li className="todoList">
+          <button onClick={props.onComplete} className="buttonCompleted">
+            {props.todos.completed ? 'completed' : 'complete'}
           </button>
-          <p className='todoText'>{props.text}</p>
-          <button onClick={edit} className='buttonEdit'> EDIT </button>                      
-          <button onClick={props.onDelete} className='buttonDelete'>X</button>
+          <p className="todoText">{props.text}</p>
+          <h1 onClick={edit} className="buttonEdit">
+            {' '}
+            E{' '}
+          </h1>
+          <h1 onClick={props.onDelete} className="buttonDelete">
+            X
+          </h1>
         </li>
       ) : (
-        <form onSubmit={editSubmit} className='formEdit' >
+        <form onSubmit={editSubmit} className="formEdit">
           <input
-          className='submitEdit'
+            className="submitEdit"
             value={todoEdit}
             onChange={editChange}
             placeholder={props.text}
           />
-          <button className='Update'>Actualizar</button>
+          <button className="Update">Actualizar</button>
         </form>
       )}
     </div>
