@@ -5,6 +5,7 @@ import { TodoCounter } from './components/TodoCounter';
 import { TodoSearch } from './components/TodoSearch';
 import { TodoItem } from './components/TodoItem';
 import { TodoForm } from './components/TodoForm';
+import { TodoEdit } from './components/TodoEdit';
 
 function App() {
   const localStorageTodos = localStorage.getItem('TODOS_V1');
@@ -90,6 +91,11 @@ function App() {
           />
         ))}
       </TodoList>
+      <TodoEdit
+      text={todo.text}
+      todoUpdate={todoUpdate}
+      id={todo.id}
+      />
       </div>
     </div>
   );
