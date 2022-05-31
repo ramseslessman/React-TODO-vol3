@@ -70,32 +70,27 @@ function App() {
   };
 
   return (
-    <div className='todoapp'>
-      <div className='conteiner'>
-      <h1 className='titleApp'>TODO LIST APP </h1>
-      <TodoCounter total={totalTodos} completed={completedTodo} />
-      <TodoForm addTodo={addTodo} />
-      <br />
-      <TodoSearch searchValue={searchValue} setSearchValue={setSearchValue} />
+    <div className="todoapp">
+      <div className="conteiner">
+        <h1 className="titleApp">TODO LIST APP </h1>
+        <TodoCounter total={totalTodos} completed={completedTodo} />
+        <TodoForm addTodo={addTodo} />
+        <br />
+        <TodoSearch searchValue={searchValue} setSearchValue={setSearchValue} />
 
-      <TodoList>
-        {searchedTodos.map((todo) => (
-          <TodoItem
-            key={todo.id}
-            text={todo.text}
-            onComplete={() => completeTodo(todo.id)}
-            onDelete={() => deleteTodo(todo.id)}
-            todos={todo}
-            todoUpdate={todoUpdate}
-            id={todo.id}
-          />
-        ))}
-      </TodoList>
-      <TodoEdit
-      text={todo.text}
-      todoUpdate={todoUpdate}
-      id={todo.id}
-      />
+        <TodoList>
+          {searchedTodos.map((todo) => (
+            <TodoItem
+              key={todo.id}
+              text={todo.text}
+              onComplete={() => completeTodo(todo.id)}
+              onDelete={() => deleteTodo(todo.id)}
+              todos={todo}
+              todoUpdate={todoUpdate}
+              id={todo.id}
+            />
+          ))}
+        </TodoList>
       </div>
     </div>
   );
