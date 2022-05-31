@@ -58,18 +58,21 @@
   color: #661971;
 }
 .buttonSubmitAdd {
-  font-size: 25px;
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  padding: 5px;
+  width: 45px;
+  height: 45px;  
+  text-shadow: #661971;  
+  border-radius: 50%; 
+  font-size: 45px;
+  display: block;  
+  text-align:center;
   cursor: pointer;
   font-weight: bold;
   transform: rotate(0);
   transition: 0.4s ease;
   color: #80c9ff;
   background-color: #661971;
-  text-align: center;
+  
+  
 }
 .buttonSubmitAdd:hover {
   transform: rotate(180deg);
@@ -116,10 +119,14 @@
   justify-content: space-between;
 }
 
+.buttonCompleted{
+
+}
+
 .submitEdit {
   background-color: #afaba4;
   border-radius: 20px;
-  width: 60%;
+  width: 90%;
   height: 30px;
   font-size: 20px;
   text-align: center;
@@ -147,26 +154,20 @@
   color: red;
 }
 
-.buttonCompleted {
-  float: left;
-}
-
-.todoText {
-  text-align: center;
-}
-
-.buttonEdit {
-  float: right;
-}
 .buttonEdit:hover {
   color: orangered;
   cursor: pointer;
 }
 
-.buttonDelete {
-  float: right;
-}
 .buttonDelete:hover {
   color: red;
   cursor: pointer;
 }
+.Update{
+  color: #80c9ff;
+}
+.Update:hover{
+  color:rgb(70, 245, 70);
+  cursor:pointer;
+}
+

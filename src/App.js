@@ -56,7 +56,7 @@ function App() {
     const newTodos = [...todos];
     newTodos.push({
       id: Date.now(),
-      completed: false,
+      completed:false,
       text,
     });
     saveTodos(newTodos);
@@ -91,6 +91,7 @@ function App() {
             />
           ))}
         </TodoList>
+        
       </div>
     </div>
   );

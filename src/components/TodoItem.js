@@ -22,9 +22,11 @@ function TodoItem(props) {
     <div>
       {!modoEdit ? (
         <li className="todoList">
-          <button onClick={props.onComplete} className="buttonCompleted">
-            {props.todos.completed ? 'completed' : 'complete'}
-          </button>
+          <input
+            type="checkbox"
+            onClick={props.onComplete}
+            className="buttonCompleted"
+          />
           <p className="todoText">{props.text}</p>
           <h1 onClick={edit} className="buttonEdit">
             E
@@ -41,7 +43,9 @@ function TodoItem(props) {
             onChange={editChange}
             placeholder={props.text}
           />
-          <button className="Update">Actualizar</button>
+          <h1 className="Update" onClick={editSubmit}>
+            U
+          </h1>
         </form>
       )}
     </div>
