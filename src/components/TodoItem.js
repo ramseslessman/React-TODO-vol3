@@ -22,11 +22,13 @@ function TodoItem(props) {
     <div>
       {!modoEdit ? (
         <li className="todoList">
-          <input
-            type="checkbox"
-            onClick={props.onComplete}
-            className="buttonCompleted"
-          />
+          <h1 onClick={props.onComplete} className="buttonCompleted">
+            {props.todos.completed ? (
+              <span className="completed"> C </span>
+            ) : (
+              <span className="complete"> C </span>
+            )}
+          </h1>
           <p className="todoText">{props.text}</p>
           <h1 onClick={edit} className="buttonEdit">
             E

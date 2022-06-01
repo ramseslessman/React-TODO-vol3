@@ -27,8 +27,9 @@ function TodoForm(props) {
           value={newTodoValue}
           onChange={onChange}
         />
-       <input
-         className='buttonSubmitAdd' value='+'/>
+       <button className='buttonSubmitAdd'>
+         +
+       </button>
         
       </form>
       {!error && <a className='todoError'> Ingrese un TODO Válido </a>}
